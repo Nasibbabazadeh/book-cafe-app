@@ -2,8 +2,8 @@ import type { TNullable } from "./util";
 
 export interface IAuthor {
     name: string;
-    birth_year: number;
-    death_year: number;
+    birth_year: TNullable<number>;
+    death_year: TNullable<number>;
 }
 
 export interface IBookDetails {
@@ -15,7 +15,7 @@ export interface IBookDetails {
     subjects: string[];
     bookshelves: string[];
     languages: string[];
-    copyright: boolean;
+    copyright: TNullable<boolean>;
     media_type: string;
     formats: {
         [key: string]: string;
@@ -24,8 +24,8 @@ export interface IBookDetails {
 }
 
 export interface IBooksApiResponse {
-    results: IBookDetails[];
     count: number,
     next: TNullable<string>,
     previous: TNullable<string>,
+    results: IBookDetails[]
 }

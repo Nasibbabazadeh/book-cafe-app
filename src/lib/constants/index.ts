@@ -37,6 +37,7 @@ export const ROUTES = {
 
 export const API_ENDPOINTS = {
     BOOKS: "/books",
-    BOOK_DETAILS: (id: string) => `/books/${id}`,
+    BOOK_DETAILS: (id: number) => `/books/${id}`,
     SEARCH_BOOKS: (query: string) => `/books?search=${query}`,
+    SEARCH_BOOKS_BY_LANGUAGE: (language: string) => `/books?language=${language}`,
 } as const;
